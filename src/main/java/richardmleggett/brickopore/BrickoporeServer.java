@@ -158,7 +158,7 @@ public class BrickoporeServer extends Thread {
     
     public void run() {
         int whiteCount = 0;
-        boolean plottingSignal = false;
+        boolean plottingSignal = true;
         System.out.println("Running on port "+port);
 
         try {    
@@ -268,9 +268,9 @@ public class BrickoporeServer extends Thread {
 
                                         colourBuffer.add(new Integer(in_buffer[2]));
 
-                                        if (plottingSignal) {
+                                        // if (plottingSignal) {
                                             signalPanel.plotSignal(colourBuffer.size()-whiteCount, in_buffer[2]);
-                                        }
+                                        // }
 
                                         signalPanel.repaint();
                                     }
@@ -391,13 +391,14 @@ public class BrickoporeServer extends Thread {
                 lastCount++;
             } else {
                 if (lastCount > 0) {
-                    if ((lastCode == COLOUR_WHITE) && (lastCount > 10)) {
-                        gotWhite = true;
-                        System.out.println("Got sequencing adapter");
-                    }  else if (gotWhite) {
+                   // if ((lastCode == COLOUR_WHITE) && (lastCount > 10)) {
+                    //    gotWhite = true;
+                     //   System.out.println("Got sequencing adapter");
+                   // }  else if (gotWhite) {
                         String seq = getSeq(lastCode, lastCount);
                         read = read + seq;
-                    }
+
+                   // }
                 }
                 
                 lastCode = c;

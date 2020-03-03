@@ -41,9 +41,9 @@ public class Brickopore extends javax.swing.JFrame {
     private BrickoporeServer server=null;
     private String urlDir = "";
     private boolean scientistsAreCheering = false;
-    private boolean debugEnabled = false;
+    private boolean debugEnabled = true;
     private boolean debugging = false;
-    
+
     /**
      * Creates new form JLegoPore
      */
@@ -105,7 +105,7 @@ public class Brickopore extends javax.swing.JFrame {
         jLabel1.setText("Port:");
 
         portTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        portTextField.setText("2424");
+        portTextField.setText("2428");
         portTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 portTextFieldActionPerformed(evt);

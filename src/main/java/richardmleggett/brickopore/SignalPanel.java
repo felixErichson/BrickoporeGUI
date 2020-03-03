@@ -64,6 +64,7 @@ public class SignalPanel extends JPanel {
     }
     
     public void plotSignal(int s, int c) {
+        System.out.println(s + ": "+c);
         Graphics g = signalImage.getGraphics();
         int minX = xOffset + ((s -1) * eventSize);
         int maxX = xOffset + (s * eventSize);
