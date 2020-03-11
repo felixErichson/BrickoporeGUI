@@ -49,7 +49,7 @@ public class SequencePanel extends JPanel {
                 g.setColor(Color.BLACK);
             }
 
-            g.drawString(base, xPos, 48);
+            g.drawString(base, xPos, 100);
             xPos += 30;
         }
     }    

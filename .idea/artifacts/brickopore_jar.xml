@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="brickopore:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/brickopore_jar</output-path>
+    <root id="archive" name="brickopore.jar">
+      <element id="module-output" name="brickopore" />
+      <element id="library" level="project" name="Maven: org.jdesktop:beansbinding:1.2.1" />
+    </root>
+  </artifact>
+</component>
